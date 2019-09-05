@@ -1,11 +1,11 @@
 {
   "name": "cypresse2e",
   "version": "1.0.0",
-  "description": "Cypress E2E tests for UCA Application",
+  "description": "Cypress E2E tests",
   "main": "index.js",
   "scripts": {
     "cypress:open": "$(npm bin)/cypress open",
-    "cypress:record": "cypress run --record --key febc7b2f-a45d-4ae8-921e-cf9a7769f7de",
+    "cypress:record": "cypress run",
     "delete:mochajson": "rm mochawesome.json || true",
     "delete:reports": "rm cypress/results/* || true && rm -Rf mochawesome-report || true",
     "prereport": "npm run delete:mochajson && npm run delete:reports",
@@ -13,7 +13,6 @@
     "report:merge": "mochawesome-merge --reportDir cypress/results > mochawesome.json",
     "report:generate": "marge --inline true --charts true mochawesome.json",
     "postreport": "npm run report:merge && npm run report:generate",
-    "percy": "export PERCY_TOKEN=141a7ea82a5ebde9f98f36cc65031fc01971b04cd80516d0779611a6b9139a93 && $(npm bin)/percy exec -- $(npm bin)/cypress run"
   },
   "author": "Murali Srinivasan",
   "license": "ISC",
