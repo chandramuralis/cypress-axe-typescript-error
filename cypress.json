@@ -1,0 +1,15 @@
+{
+  "projectId": "sampleProjectID",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  },
+  "env": {
+    "baseUrl": "https://google.com"
+  },
+  "baseUrl": "https://google.com",
+  "chromeWebSecurity": false
+}
